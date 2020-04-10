@@ -37,6 +37,12 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!-- https://cloud.spring.io/spring-cloud-static/spring-cloud-netflix/2.2.1.RELEASE/reference/html/#jdk-11-support -->
+        <!-- The JAXB modules which the Eureka server depends upon were removed in JDK 11 -->
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
